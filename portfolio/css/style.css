@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100vh;
+    min-width: 10rem;
+    max-width: 12rem;
+    background-color: rgb(21, 45, 48);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.info {
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+    max-width: 7em;
+    height: 7em;
+    border-radius: 55px;
+}
+
+.navlist {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 1em 0;
+}
+
+.navlist li {
+    list-style: none;
+    min-height: 2em;
+    display: flex;
+
+
+}
+
+.navlist li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1em;
+    gap: .7em;
+}
+
+.navlist li a:hover {
+    color: aqua;
+}
+
+.acc {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.background {
+    background: rgba(24, 23, 23, 0.7) url('../img/bg.png');
+    background-size: cover;
+    background-blend-mode: color;
+
+}
+
+#home {
+    height: 100vh;
+}
+
+.hi {
+    position: absolute;
+    display: inline;
+    left: 12rem;
+    top: 2em;
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    font-size: 5em;
+}
+
+.text {
+    color: white;
+}
+
+.text:hover {
+    color: aqua;
+}
+
+#press {
+    display: inline;
+    position: absolute;
+    left: 25rem;
+    top: 27em;
+    font-size: 1.3em;
+    border: 1px solid;
+    padding: 5px;
+    border-image-source: radial-gradient(circle at top left, aqua, lime);
+    border-image-slice: 10;
+    cursor: pointer;
+}
+
+.hi p {
+    position: relative;
+}
+
+.hi p span:hover {
+    color: aqua;
+    font-size: 1.2em
+}
+
+.hii {
+    position: relative;
+    width: max-content;
+}
+
+.hiii {
+    position: relative;
+    width: max-content;
+}
+
+.hiiii {
+    position: relative;
+    width: max-content;
+}
+
+.hii::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hii::before {
+    background: rgba(24, 23, 23, 0.7) url('../img/bg.png');
+    z-index: 2;
+    animation: type 1.5s steps(3) 1s forwards;
+
+}
+
+.hiii::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hiii::before {
+    background: rgba(24, 23, 23, 0.7) url('../img/bg.png');
+    z-index: 2;
+    animation: type 1.5s steps(13) 2.5s forwards;
+
+}
+
+.hiiii::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hiiii::before {
+    background: rgba(24, 23, 23, 0.7) url('../img/bg.png');
+    z-index: 2;
+    animation: type 1.5s steps(13) 4s forwards;
+
+}
+
+@keyframes type {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+.burger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.line {
+    display: block;
+    width: 25px;
+    background-color: white;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
