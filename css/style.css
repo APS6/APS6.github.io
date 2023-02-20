@@ -1,6 +1,18 @@
 * {
     margin: 0;
     padding: 0;
+    --bgcol: rgba(6, 28, 34, 255);
+    --bordergr: radial-gradient(circle at top left, aqua, lime);
+}
+
+body {
+    background-color: var(--bgcol);
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .sidebar {
@@ -8,6 +20,7 @@
     min-width: 10rem;
     max-width: 12rem;
     background-color: rgb(21, 45, 48);
+    background-image: linear-gradient(rgb(21, 45, 48), rgb(53, 99, 105));
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -148,7 +161,7 @@
 }
 
 .hii::before {
-    background: rgba(24, 23, 23, 0.7) url('../img/bg.png');
+    background-color: var(--bgcol);
     z-index: 2;
     animation: type 1.5s steps(3) 1s forwards;
 
@@ -164,7 +177,7 @@
 }
 
 .hiii::before {
-    background: rgba(24, 23, 23, 0.7) url('../img/bg.png');
+    background-color: var(--bgcol);
     z-index: 2;
     animation: type 1.5s steps(13) 2.5s forwards;
 
@@ -180,7 +193,7 @@
 }
 
 .hiiii::before {
-    background: rgba(24, 23, 23, 0.7) url('../img/bg.png');
+    background-color: var(--bgcol);
     z-index: 2;
     animation: type 1.5s steps(13) 4s forwards;
 
@@ -199,7 +212,7 @@
 }
 
 .burger {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     cursor: pointer;
@@ -213,4 +226,44 @@
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
+}
+
+#about {
+    height: 100vh;
+    position: relative;
+    left: 14rem;
+    top: 5rem;
+
+}
+
+h1 {
+    font-size: 8ch;
+    color: aqua;
+    height: 2em;
+}
+
+#aboutin {
+    display:flex;
+    gap: 6rem;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+#aboutin img {
+    max-width: 15rem;
+    max-height: 15rem;
+    border: 1px solid;
+    border-image-source: linear-gradient(135deg,aqua,lime);
+    border-image-slice: 1;
+}
+
+#text p {
+    color: white;
+    width: 25em;
+    font-size: 3ch;
 }
