@@ -33,32 +33,16 @@
     .sidebar.active {
         left: 0;
     }
-
-    #about {
-        left: 1.8rem;
-        width: 100%;
-        display: inline;
-    }
-
-    #aboutin {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
     h1 {
-        display: inline;
+        left: 1rem;}
+    #aboutin {
+        left: 2rem;
+        grid-template-columns: auto;
+        gap: 3rem;
+        padding-top: 1rem;
     }
-
     #text p {
-        width: 14em;
-        font-size: 2ch;
-
+    font-size: 2.3ch;
     }
-    #aboutin img{
-        width: 10rem;
-        height: 10rem;
-    }
-
-
 
 }

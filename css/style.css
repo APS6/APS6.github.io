@@ -5,11 +5,6 @@
     --bordergr: radial-gradient(circle at top left, aqua, lime);
 }
 
-body {
-    background-color: var(--bgcol);
-    
-}
-
 a {
     text-decoration: none;
     color: white;
@@ -17,8 +12,7 @@ a {
 
 .sidebar {
     height: 100vh;
-    min-width: 10rem;
-    max-width: 12rem;
+    width: min(10rem, 12rem);
     background-color: rgb(21, 45, 48);
     background-image: linear-gradient(rgb(21, 45, 48), rgb(53, 99, 105));
     position: fixed;
@@ -26,6 +20,7 @@ a {
     flex-direction: column;
     gap: 1rem;
     transition: all 0.3s ease-in-out;
+    z-index: 5;
 
 }
 
@@ -116,7 +111,7 @@ a {
 
 #press {
     display: inline;
-    position: absolute;
+    position: relative;
     left: 25rem;
     top: 27em;
     font-size: 1.3em;
@@ -205,12 +200,6 @@ a {
     }
 }
 
-@keyframes blink {
-    to {
-        background: transparent;
-    }
-}
-
 .burger {
     position: fixed;
     top: 10px;
@@ -228,34 +217,41 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-#about {
+#about{
     height: 100vh;
-    position: relative;
-    left: 14rem;
-    top: 5rem;
-
+    background-color: var(--bgcol);
 }
 
 h1 {
+    display: inline;
+    position: relative;
     font-size: 8ch;
     color: aqua;
-    height: 2em;
+    height: 3em;
+    left: 12rem;
 }
 
 #aboutin {
-    display:flex;
-    gap: 6rem;
+    position: absolute;
+    left: 12rem;
+    display: grid;
+    gap: 7rem;
+    grid-template-columns: 4fr 1fr;
+    margin-right: 2rem;
+    padding-top: 3rem;
 }
 
 #text {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
 }
+.center {
+    display: grid;
+    place-items: center;
 
+}
 #aboutin img {
-    max-width: 15rem;
     max-height: 15rem;
     border: 1px solid;
     border-image-source: linear-gradient(135deg,aqua,lime);
@@ -264,6 +260,9 @@ h1 {
 
 #text p {
     color: white;
-    width: 25em;
     font-size: 3ch;
+}
+
+#text p a {
+    color: aqua;
 }
