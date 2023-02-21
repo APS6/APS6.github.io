@@ -33,16 +33,20 @@
     .sidebar.active {
         left: 0;
     }
-    h1 {
-        left: 1rem;}
+
+    #abouth {
+        left: 1rem;
+    }
+
     #aboutin {
         left: 2rem;
         grid-template-columns: auto;
         gap: 3rem;
         padding-top: 1rem;
     }
+
     #text p {
-    font-size: 2.3ch;
+        font-size: 2.3ch;
     }
 
 }

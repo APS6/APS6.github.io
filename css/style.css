@@ -149,10 +149,7 @@ a {
 .hii::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
 }
 
 .hii::before {
@@ -165,10 +162,7 @@ a {
 .hiii::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
 }
 
 .hiii::before {
@@ -181,10 +175,7 @@ a {
 .hiiii::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
 }
 
 .hiiii::before {
@@ -222,7 +213,8 @@ a {
     background-color: var(--bgcol);
 }
 
-h1 {
+#abouth {
+    font-family: 'Cousine', monospace;
     display: inline;
     position: relative;
     font-size: 8ch;
@@ -230,6 +222,7 @@ h1 {
     height: 3em;
     left: 12rem;
 }
+
 
 #aboutin {
     position: absolute;
@@ -249,7 +242,7 @@ h1 {
 .center {
     display: grid;
     place-items: center;
-
+    transition-delay: 400ms !important;
 }
 #aboutin img {
     max-height: 15rem;
@@ -266,3 +259,18 @@ h1 {
 #text p a {
     color: aqua;
 }
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+
+}
+
