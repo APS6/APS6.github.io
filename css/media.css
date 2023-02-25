@@ -54,7 +54,7 @@
     }
     
     #projects{
-        height: 120vh;
+        height: 130vh;
     }
     #projh{
         font-size: 7ch;
@@ -71,6 +71,20 @@
         grid-template-rows: 1fr 1fr 1fr;
     }
 
+    .cc{
+        left: 1rem;
+        grid-template-rows: 8rem 4rem 20rem;
+    }
+    #contacth{
+        font-size: 7ch;
+    }
+    #cp{
+        font-size: 2.5ch;
+    }
+    .formtext{
+        font-size: 1.5ch;
+    }
+
 }
 
 @media only screen and (min-height:900px){
@@ -83,4 +97,8 @@
     #pp{
         grid-template-rows: 5rem 6rem 55rem;
     }
+    #contact {
+        height: 70vh;
+    }
+
 }

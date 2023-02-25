@@ -276,15 +276,19 @@ a {
     transform: translateX(-100%);
     transition: all 700mss;
 }
-#c1{
+
+#c1 {
     transition-delay: 100ms;
 }
-#c2{
+
+#c2 {
     transition-delay: 300ms;
 }
-#c3{
+
+#c3 {
     transition-delay: 500ms;
 }
+
 .show {
     opacity: 1;
     filter: blur(0);
@@ -313,7 +317,6 @@ a {
     font-family: 'Cousine', monospace;
     font-size: 8ch;
     color: aqua;
-    height: 3em;
 }
 
 #pw {
@@ -347,35 +350,37 @@ a {
 .card-cont {
     font-family: sans-serif;
     color: white;
-    --padding:.7rem;
+    --padding: .7rem;
     padding: var(--padding);
-    background: linear-gradient(hsl(0 0% 0% / 0),hsl(0 0% 0% / .7));
+    background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / .7));
     max-width: 34ch;
 
 }
 
-.card-title{
+.card-title {
     position: relative;
     width: max-content;
 }
-.card-title::after{
+
+.card-title::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: calc(var(--padding)*-1);
     width: calc(100% + var(--padding));
     height: 3px;
-    background: linear-gradient(90deg ,aqua, lime);
-
-
+    background: linear-gradient(90deg, aqua, lime);
 }
-.card-text{
+
+.card-text {
     font-size: 2.5ch;
     padding-bottom: 5px;
 }
+
 #ct-1 {
     font-size: 3ch;
 }
+
 .button {
     background-color: rgb(52, 187, 52);
     padding: 7px;
@@ -385,34 +390,117 @@ a {
 
 @media (hover) {
 
-    .card:hover{
+    .card:hover {
         transform: scale(1.05);
     }
-    .button:hover{
+
+    .button:hover {
         background-color: rgb(43, 156, 43);
     }
-    .card-title::after{
+
+    .card-title::after {
         transform: scale(0);
         transition: transform 500ms ease;
         transform-origin: left;
-    
+
     }
-    .card:hover .card-title::after{
+
+    .card:hover .card-title::after {
         transform: scale(1);
     }
-    .card-cont{
+
+    .card-cont {
         transform: translateY(69%);
         transition: transform 500ms ease;
     }
+
     .card:hover .card-cont {
         transform: translateY(0);
     }
-    .card-cont > *:not(.card-title){
+
+    .card-cont>*:not(.card-title) {
         opacity: 0;
         transition: opacity 500ms linear;
     }
-    .card:hover .card-cont > * {
+
+    .card:hover .card-cont>* {
         opacity: 1;
     }
 
 }
+
+#contact {
+    height: 100vh;
+    background-color: var(--bgcol);
+}
+
+.cc {
+    position: absolute;
+    left: 11rem;
+    display: grid;
+    grid-template-rows: 6rem 6rem 25rem;
+    width: 65%;
+}
+
+#contacth {
+    font-family: 'Cousine', monospace;
+    font-size: 8ch;
+    color: aqua;
+}
+
+#cp {
+    color: white;
+    font-size: 3ch;
+}
+
+.formtext {
+    background-color: rgb(45, 46, 58);
+    color: white;
+    font-size: 2ch;
+}
+
+#name {
+    grid-area: name;
+}
+
+#email {
+    grid-area: email;
+}
+
+#subject {
+    grid-area: subject;
+}
+
+#message {
+    grid-area: message;
+    font-size: 3ch;
+}
+
+#submit {
+    grid-area: submit;
+    width: 100%;
+    color: white;
+    background-color: rgb(45, 46, 58);
+    border: 2px solid;
+    border-image-source: radial-gradient(circle at top left, aqua, lime);
+    border-image-slice: 10;
+    font-size: 2.5ch;
+    transition: transform 300ms ease;
+}
+
+#submit:hover {
+    border-image-source: radial-gradient(circle at top left, lime, aqua);
+    transform: scale(1.05);
+}
+
+form {
+    display: grid;
+    grid-template-areas:
+        'name email'
+        'subject subject'
+        'message message'
+        'x submit';
+    gap: 1rem;
+    width: 100%;
+}
+
