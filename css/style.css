@@ -1,8 +1,15 @@
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     --bgcol: rgba(6, 28, 34, 255);
     --bordergr: radial-gradient(circle at top left, aqua, lime);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -155,7 +162,7 @@ a {
 .hii::before {
     background-color: var(--bgcol);
     z-index: 2;
-    animation: type 1.5s steps(3) 1s forwards;
+    animation: type 500ms steps(3) 500ms forwards;
 
 }
 
@@ -168,7 +175,7 @@ a {
 .hiii::before {
     background-color: var(--bgcol);
     z-index: 2;
-    animation: type 1.5s steps(13) 2.5s forwards;
+    animation: type 1s steps(13) 1s forwards;
 
 }
 
@@ -181,7 +188,7 @@ a {
 .hiiii::before {
     background-color: var(--bgcol);
     z-index: 2;
-    animation: type 1.5s steps(13) 4s forwards;
+    animation: type 1s steps(13) 2s forwards;
 
 }
 
@@ -208,8 +215,8 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-#about{
-    height: 100vh;
+#about {
+    height: 85vh;
     background-color: var(--bgcol);
 }
 
@@ -239,15 +246,17 @@ a {
     flex-direction: column;
     gap: 2rem;
 }
+
 .center {
     display: grid;
     place-items: center;
     transition-delay: 400ms !important;
 }
+
 #aboutin img {
     max-height: 15rem;
     border: 1px solid;
-    border-image-source: linear-gradient(135deg,aqua,lime);
+    border-image-source: linear-gradient(135deg, aqua, lime);
     border-image-slice: 1;
 }
 
@@ -260,13 +269,22 @@ a {
     color: aqua;
 }
 
+/* slide in animation */
 .hidden {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 2s;
+    transition: all 700mss;
 }
-
+#c1{
+    transition-delay: 100ms;
+}
+#c2{
+    transition-delay: 300ms;
+}
+#c3{
+    transition-delay: 500ms;
+}
 .show {
     opacity: 1;
     filter: blur(0);
@@ -274,3 +292,127 @@ a {
 
 }
 
+.icon {
+    filter: invert(1);
+}
+
+#projects {
+    height: 100vh;
+    background-color: var(--bgcol);
+}
+
+#pp {
+    position: absolute;
+    left: 10.5rem;
+    display: grid;
+    grid-template-rows: 6rem 7rem 20rem;
+
+}
+
+#projh {
+    font-family: 'Cousine', monospace;
+    font-size: 8ch;
+    color: aqua;
+    height: 3em;
+}
+
+#pw {
+    color: white;
+    font-size: 3ch;
+}
+
+#proin {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background-image: url(../img/APS.png);
+    background-size: cover;
+    /* background-size: 20rem 20rem; */
+    border-inline-start: 4px solid;
+    border-image-source: linear-gradient(aqua, lime);
+    border-image-slice: 10;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    line-height: 1.5;
+    transition: transform 500ms ease;
+}
+
+.card-cont {
+    font-family: sans-serif;
+    color: white;
+    --padding:.7rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% / 0),hsl(0 0% 0% / .7));
+    max-width: 34ch;
+
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+.card-title::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(var(--padding)*-1);
+    width: calc(100% + var(--padding));
+    height: 3px;
+    background: linear-gradient(90deg ,aqua, lime);
+
+
+}
+.card-text{
+    font-size: 2.5ch;
+    padding-bottom: 5px;
+}
+#ct-1 {
+    font-size: 3ch;
+}
+.button {
+    background-color: rgb(52, 187, 52);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+
+@media (hover) {
+
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .button:hover{
+        background-color: rgb(43, 156, 43);
+    }
+    .card-title::after{
+        transform: scale(0);
+        transition: transform 500ms ease;
+        transform-origin: left;
+    
+    }
+    .card:hover .card-title::after{
+        transform: scale(1);
+    }
+    .card-cont{
+        transform: translateY(69%);
+        transition: transform 500ms ease;
+    }
+    .card:hover .card-cont {
+        transform: translateY(0);
+    }
+    .card-cont > *:not(.card-title){
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+    .card:hover .card-cont > * {
+        opacity: 1;
+    }
+
+}
