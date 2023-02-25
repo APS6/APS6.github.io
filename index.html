@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anirudha P Sah</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href=link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Merriweather&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Merriweather&family=Raleway&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -30,17 +32,18 @@
             <span>Web Developer</span>
         </header>
         <ul class="navlist">
-            <li><a href="#home"><box-icon name='home-alt' class="icon"></box-icon> Home</a></li>
+            <li><a href="#home"><box-icon name='home-alt' class='icon'></box-icon> Home</a></li>
             <li><a href="#about"><box-icon type='solid' name='user' class="icon"></box-icon> About me</a></li>
             <li><a href="#projects"><box-icon name='pyramid' class="icon"></box-icon> Projects</a></li>
             <li><a href="#contact"><box-icon name='comment-dots' type='solid' class="icon"></box-icon> Contact</a></li>
         </ul>
         <div class="acc">
-            <a href="https://github.com/APS6" target="_blank"><box-icon type='logo' name='github'></box-icon></a>
+            <a href="https://github.com/APS6" target="_blank"><box-icon type='logo' name='github'
+                    class='icon'></box-icon></a>
             <a href="https://discordapp.com/users/752376627937411103" target="_blank"><box-icon name='discord-alt'
-                    type='logo'></box-icon></a>
-            <a href="https://twitter.com/AnirudhaPSah" target="_blank"><box-icon type='logo'
-                    name='twitter'></box-icon></a>
+                    type='logo' class='icon'></box-icon></a>
+            <a href="https://twitter.com/AnirudhaPSah" target="_blank"><box-icon type='logo' name='twitter'
+                    class='icon'></box-icon></a>
         </div>
     </nav>
     <section class="background" id="home">
@@ -64,15 +67,46 @@
     <section id="about">
         <h1 id='abouth'>About Me</h1>
         <div id="aboutin">
-            <div id="text" class="hidden">
+            <div id="text">
                 <p>Glad to see you visit my page, I am Anirudh. I am pretty young and I think its an advantage for me. I
                     learnt to code from the internet and am still learning!</p>
                 <p> I'm constantly working to improve my skills and stay up-to-date with the latest technologies </p>
                 <p> Hope you like my page! You can contact me <a href="#contact">here</a></p>
             </div>
-            <div class="center hidden"><img src="img/logo.png" alt="image"></div>
+            <div class="center"><img src="img/logo.png" alt="image"></div>
+        </div>
+    </section>
+    <section id="projects">
+        <div id="pp">
+            <h1 id="projh">Projects</h1>
+            <p id="pw">Here are some projects I have made. Not much stuff yet but it shall be filled with a bunch of cool stuff
+                in the future</p>
+            <div id="proin">
+                <div class="card hidden" id="c1">
+                    <div class="card-cont">
+                        <h2 class="card-title">A Website</h2>
+                        <p class="card-text" id="ct-1">This was my first website</p> <a href="https://aps6.github.io/website/" class="button">View
+                            Project</a>
+                    </div>
+                </div>
+                <div class="card hidden" id="c2">
+                    <div class="card-cont">
+                        <h2 class="card-title">Recovery?</h2>
+                        <p class="card-text">So you found it! Press the button below and the site will be normal</p> <a
+                            href="#home" class="button">Recover</a>
+                    </div>
+                </div>
+                <div class="card hidden" id="c3">
+                    <div class="card-cont">
+                        <h2 class="card-title">Nothing :(</h2>
+                        <p class="card-text">It is empty right now but will have something in future.</p> <a
+                            href="https://www.youtube.com/watch?v=dQw4w9WgXcQdiv.card-cont" class="button">View Project</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script src="js/resp.js"></script>
 </body>
+
 </html>
