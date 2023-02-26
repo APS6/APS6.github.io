@@ -27,7 +27,7 @@ a {
     flex-direction: column;
     gap: 1rem;
     transition: all 0.3s ease-in-out;
-    z-index: 5;
+    z-index: 7;
     border-inline-end: 3px solid;
     border-image-source: linear-gradient(rgb(8, 21, 39), rgb(34, 156, 212), rgb(8, 21, 39));
     border-image-slice: 5;
