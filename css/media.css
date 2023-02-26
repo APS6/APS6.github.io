@@ -122,3 +122,12 @@
     }
 
 }
+
+@media only screen and (max-height:590px){
+    #home{
+        height: 120vh;
+    }
+    #about{
+        height: 125vh;
+    }
+}
