@@ -29,6 +29,9 @@
     #press {
         left: 2rem;
     }
+    h3{
+        left: 0;
+    }
 
     .sidebar.active {
         left: 0;
@@ -72,8 +75,9 @@
     }
 
     .cc{
-        left: 1rem;
+        left: 2.2rem;
         grid-template-rows: 8rem 4rem 20rem;
+        width: 80%;
     }
     #contacth{
         font-size: 7ch;
@@ -82,7 +86,20 @@
         font-size: 2.5ch;
     }
     .formtext{
-        font-size: 1ch;
+        font-size: 2ch;
+    }
+    form{
+        grid-template-areas:
+        'name name'
+        'email email'
+        'subject subject'
+        'message message'
+        'x submit';
+    }
+    #blob{
+        height: 100px;
+        width: 100px;
+        filter: blur(50px);
     }
 
 }

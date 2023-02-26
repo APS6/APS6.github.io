@@ -28,7 +28,9 @@ a {
     gap: 1rem;
     transition: all 0.3s ease-in-out;
     z-index: 5;
-
+    border-inline-end: 3px solid;
+    border-image-source: linear-gradient(rgb(8, 21, 39), rgb(34, 156, 212), rgb(8, 21, 39));
+    border-image-slice: 5;
 }
 
 .info {
@@ -49,13 +51,14 @@ a {
 }
 
 .navlist {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4em;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(90deg, rgb(8, 21, 39), rgb(20, 78, 105), rgb(8, 21, 39));
+    border-image-slice: 1;
     padding: 1em 0;
 }
 
@@ -129,13 +132,27 @@ a {
     cursor: pointer;
 }
 
+h3 {
+    display: inline-block;
+    position: relative;
+    left: 15rem;
+    top: 42em;
+    font-size: 1.8ch;
+    color: white;
+    opacity: 0;
+}
+
+.see {
+    opacity: 1;
+}
+
 .hi p {
     position: relative;
 }
 
 .hi p span:hover {
     color: aqua;
-    font-size: 1.2em
+
 }
 
 .hii {
@@ -430,7 +447,7 @@ a {
 }
 
 #contact {
-    height: 100vh;
+    height: 92vh;
     background-color: var(--bgcol);
 }
 
@@ -439,7 +456,7 @@ a {
     left: 11rem;
     display: grid;
     grid-template-rows: 6rem 6rem 25rem;
-    width: 65%;
+    width: 55%;
 }
 
 #contacth {
@@ -457,6 +474,7 @@ a {
     background-color: rgb(45, 46, 58);
     color: white;
     font-size: 2ch;
+    border: 0;
 }
 
 #name {
@@ -504,3 +522,117 @@ form {
     width: 100%;
 }
 
+
+footer {
+    background-color: rgb(4, 18, 22);
+    height: 8vh;
+    display: grid;
+    place-items: center;
+    border-block-start: 2px solid;
+    border-image-source: linear-gradient(90deg, rgb(8, 21, 39), rgb(34, 156, 212), rgb(8, 21, 39));
+    border-image-slice: 1;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer div {
+    display: flex;
+    gap: 3rem;
+
+}
+
+.boom {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    animation: crash 6s linear;
+}
+
+@keyframes crash {
+    0% {
+        translate: -100vw;
+        background-image: url(https://64.media.tumblr.com/9df5b9ec8238179fa71dfa9685782b0f/tumblr_n5y61fuv9O1tx9mwqo1_1280.gif);
+    }
+
+    49% {
+        background-image: url(https://64.media.tumblr.com/9df5b9ec8238179fa71dfa9685782b0f/tumblr_n5y61fuv9O1tx9mwqo1_1280.gif);
+    }
+
+    50% {
+        translate: 0;
+        background-image: url(https://vignette.wikia.nocookie.net/robloxpokemonbrickbronze/images/1/17/Explosion.gif/revision/latest?cb=20180130164931);
+    }
+
+    60% {
+        background-image: url(https://vignette.wikia.nocookie.net/robloxpokemonbrickbronze/images/1/17/Explosion.gif/revision/latest?cb=20180130164931);
+
+    }
+}
+
+.blady {
+    animation: break 6s ease-in-out forwards;
+}
+
+@keyframes break {
+    50% {
+        rotate: 0;
+    }
+
+    52% {
+        rotate: 1deg;
+    }
+
+    54% {
+        rotate: -1deg;
+
+    }
+
+    56% {
+        rotate: 2deg;
+
+    }
+
+    58% {
+        rotate: -2deg;
+    }
+
+    60% {
+        rotate: 6deg;
+    }
+
+    100% {
+        rotate: 6deg;
+    }
+}
+
+#blob {
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    filter: blur(70px);
+}
+
+
+@keyframes rotate{
+    from{
+        rotate: 0;
+    }
+    50%{
+        scale: 1 1.5;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
