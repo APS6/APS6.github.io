@@ -130,6 +130,7 @@ a {
     border-image-source: radial-gradient(circle at top left, aqua, lime);
     border-image-slice: 10;
     cursor: pointer;
+    z-index: 6;
 }
 
 h3 {
@@ -148,11 +149,6 @@ h3 {
 
 .hi p {
     position: relative;
-}
-
-.hi p span:hover {
-    color: aqua;
-
 }
 
 .hii {
@@ -525,7 +521,6 @@ form {
 
 footer {
     background-color: rgb(4, 18, 22);
-    height: 8vh;
     display: grid;
     place-items: center;
     border-block-start: 2px solid;

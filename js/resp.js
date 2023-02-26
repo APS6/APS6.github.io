@@ -54,3 +54,96 @@ window.onpointermove = event => {
     top: `${clientY}px`
   }, { duration: 3000, fill: "forwards" });
 }
+
+
+
+// hacker effect
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interval = null;
+
+document.querySelector("p").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 30);
+}
+
+
+const letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interva = null;
+
+document.querySelector("#x").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interva);
+  
+  interva = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.valu[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.valu.length){ 
+      clearInterval(interva);
+    }
+    
+    iteration += 1 / 3;
+  }, 30);
+}
+
+
+const lette = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interv = null;
+
+document.querySelector("#y").onmouseover = event => {  
+    let iteration = 0;
+    
+    clearInterval(interv);
+    
+    interv = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) {
+            return event.target.dataset.val[index];
+          }
+        
+          return lette[Math.floor(Math.random() * 26)]
+        })
+        .join("");
+      
+      if(iteration >= event.target.dataset.val.length){ 
+        clearInterval(interv);
+      }
+      
+      iteration += 1 / 3;
+    }, 30);
+  }
+
