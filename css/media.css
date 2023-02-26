@@ -27,7 +27,7 @@
     }
 
     #press {
-        left: 2rem;
+        left: 4rem;
     }
     h3{
         left: 0;
@@ -36,9 +36,12 @@
     .sidebar.active {
         left: 0;
     }
+    #home{
+       height: 115vh;
+    }
 
     #about{
-        height: 100vh;
+        height: 115vh;
     }
 
     #abouth {
