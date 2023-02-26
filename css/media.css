@@ -104,8 +104,9 @@
         width: 100px;
         filter: blur(50px);
     }
-    #footer{
-        font-size:.7ch;
+    footer{
+        font-size: 1.3ch;
+    }
 
 }
 

@@ -359,7 +359,9 @@ h3 {
     line-height: 1.5;
     transition: transform 500ms ease;
 }
-
+#c1{
+    background-image: url(../img/website.png);
+}
 .card-cont {
     font-family: sans-serif;
     color: white;
