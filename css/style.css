@@ -606,21 +606,21 @@ footer div {
         rotate: 6deg;
     }
 }
-
-#blob {
-    background-color: white;
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background: linear-gradient(to right, aquamarine, mediumpurple);
-    animation: rotate 20s infinite;
-    filter: blur(70px);
+@media (min-width:1020px){
+    #blob {
+        background-color: white;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -5min0%;
+        border-radius: 50%;
+        background: linear-gradient(to right, aquamarine, mediumpurple);
+        animation: rotate 20s infinite;
+        filter: blur(70px);
+    }
 }
-
 
 @keyframes rotate{
     from{
