@@ -99,6 +99,9 @@
         'message message'
         'x submit';
     }
+    #message{
+        font-size:2ch;
+    }
     #blob{
         height: 100px;
         width: 100px;
