@@ -309,10 +309,6 @@ h3 {
 
 }
 
-.icon {
-    filter: invert(1);
-}
-
 #projects {
     height: 100vh;
     background-color: var(--bgcol);
@@ -359,9 +355,11 @@ h3 {
     line-height: 1.5;
     transition: transform 500ms ease;
 }
-#c1{
+
+#c1 {
     background-image: url(../img/APS-1.png);
 }
+
 .card-cont {
     font-family: sans-serif;
     color: white;
@@ -445,17 +443,21 @@ h3 {
 }
 
 #contact {
-    height: 92vh;
+    /* height: 92vh; */
+    border-block-start: 1px solid rgb(1, 38, 48);
     background-color: var(--bgcol);
 }
 
 .cc {
-    position: absolute;
+    position: relative;
     left: 11rem;
     display: grid;
-    grid-template-rows: 6rem 6rem 25rem;
-    width: 55%;
+    grid-template-rows: 7rem 21rem;
+    width: 80%;
+    display: grid;
+    place-items: center;
 }
+
 
 #contacth {
     font-family: 'Cousine', monospace;
@@ -465,79 +467,35 @@ h3 {
 
 #cp {
     color: white;
-    font-size: 3ch;
+
 }
 
-.formtext {
-    background-color: rgb(45, 46, 58);
-    color: white;
-    font-size: 2ch;
-    border: 0;
-}
-
-#name {
-    grid-area: name;
-}
-
-#email {
-    grid-area: email;
-}
-
-#subject {
-    grid-area: subject;
-}
-
-#message {
-    grid-area: message;
-    font-size: 3ch;
-}
-
-#submit {
-    grid-area: submit;
-    width: 100%;
-    color: white;
-    background-color: rgb(45, 46, 58);
-    border: 2px solid;
-    border-image-source: radial-gradient(circle at top left, aqua, lime);
-    border-image-slice: 10;
-    font-size: 2.5ch;
-    transition: transform 300ms ease;
-}
-
-#submit:hover {
-    border-image-source: radial-gradient(circle at top left, lime, aqua);
-    transform: scale(1.05);
-}
-
-form {
+.con {
+    font-size: 5ch;
     display: grid;
-    grid-template-areas:
-        'name email'
-        'subject subject'
-        'message message'
-        'x submit';
-    gap: 1rem;
-    width: 100%;
+    gap: 1.5em;
 }
 
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
 
 footer {
-    background-color: rgb(4, 18, 22);
-    display: grid;
-    place-items: center;
-    border-block-start: 2px solid;
-    border-image-source: linear-gradient(90deg, rgb(8, 21, 39), rgb(34, 156, 212), rgb(8, 21, 39));
-    border-image-slice: 1;
+    background-color: rgb(3, 26, 32);
+    border-top: 3px solid;
+    border-image-source: linear-gradient(90deg, rgb(2, 25, 44), rgb(0, 81, 119), rgb(2, 25, 44));
+    border-image-slice: 5;
 }
 
-footer h2 {
+footer p {
+    width: 100%;
     color: white;
-}
-
-footer div {
-    display: flex;
-    gap: 3rem;
-
+    display: grid;
+    place-content: center;
+    font-size: 3ch;
+    padding: 10px 0;
 }
 
 .boom {
@@ -606,15 +564,16 @@ footer div {
         rotate: 6deg;
     }
 }
-@media (min-width:1020px){
+
+@media (min-width:1020px) {
     #blob {
         background-color: white;
         height: 200px;
         width: 200px;
         position: absolute;
-        left: 50%;
+        left: 80%;
         top: 50%;
-        translate: -50% -5min0%;
+        translate: -50% -50%;
         border-radius: 50%;
         background: linear-gradient(to right, aquamarine, mediumpurple);
         animation: rotate 20s infinite;
@@ -622,14 +581,16 @@ footer div {
     }
 }
 
-@keyframes rotate{
-    from{
+@keyframes rotate {
+    from {
         rotate: 0;
     }
-    50%{
+
+    50% {
         scale: 1 1.5;
     }
-    to{
+
+    to {
         rotate: 360deg;
     }
 }
